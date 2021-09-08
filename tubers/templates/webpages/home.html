@@ -98,8 +98,9 @@
         {% for yt in youtubers %}
         <div class="card border-0 text-center">
           <div>
+            <a href="{% url 'youtubers_detail' yt.id %}">
             <img src="{{ yt.photo.url }}" class="card-img-top" alt="team-member">
-
+          </a>
           </div>
           <div class="card-body">
             <h5 class="card-title">{{ yt.name }}</h5>
