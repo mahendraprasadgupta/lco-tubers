@@ -51,7 +51,9 @@
         
         <div class="card border-0 text-center ml-3 mr-3">
           <div class="feature-text">
+            <a href="{% url 'youtubers_detail' yt.id %}">
             <img src="{{ yt.photo.url }}" class="card-img-top" alt="team-member">
+            </a>
             <span class="text-left bg-accent font-weight-bold">
               Featured
             </span>
