@@ -4,9 +4,10 @@ from youtubers.models import Youtuber
 
 # Create your views here.
 
+teams = Team.objects.all()
+
 def home(request):
     sliders = Slider.objects.all()
-    teams = Team.objects.all()
     featured_youtubers = Youtuber.objects.order_by('-created_date').filter(is_featured=True)
     youtubers = Youtuber.objects.order_by('-created_date')
     data = {
@@ -21,6 +22,7 @@ def home(request):
 def about(request):
     data = {
         'title':'About',
+        'teams':teams,
     }
     return render(request,'webpages/about.html',data)
 
