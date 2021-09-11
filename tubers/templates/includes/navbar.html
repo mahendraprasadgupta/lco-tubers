@@ -10,20 +10,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          {% url 'home' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+          {% url 'about' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'youtubers' %}">Tubers</a>
+          {% url 'youtubers' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Tubers</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'services' %}">Services</a>
+          {% url 'services' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Services</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          {% url 'contact' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Contact</a>
           </li>
 
         </ul>

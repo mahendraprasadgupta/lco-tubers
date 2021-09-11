@@ -12,16 +12,26 @@ def home(request):
     data = {
         'sliders':sliders,
         'teams':teams,
+        'title':'Home',
         'youtubers':youtubers,
         'featured_youtubers':featured_youtubers
     }
     return render(request,'webpages/home.html',data)
 
 def about(request):
-    return render(request,'webpages/about.html')
+    data = {
+        'title':'About',
+    }
+    return render(request,'webpages/about.html',data)
 
 def contact(request):
-    return render(request,'webpages/contact.html')
+    data = {
+        'title':'Contact',
+    }
+    return render(request,'webpages/contact.html',data)
 
 def services(request):
-    return render(request,'webpages/services.html')
+    data = {
+        'title':'Services',
+    }
+    return render(request,'webpages/services.html',data)

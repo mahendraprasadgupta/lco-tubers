@@ -30,6 +30,7 @@ def youtubers(request):
         'page_obj':page_obj,
         'city_search':city_search,
         'camera_search':camera_search,
+        'title':'Tubers',
         'category_search':category_search,
     
     }
@@ -39,6 +40,7 @@ def youtubers_detail(request,id):
     tuber= get_object_or_404(Youtuber,pk=id)
     data={
             'tuber':tuber,
+            'title':tuber.name,
         }
     return render(request,'youtubers/tuberdetails.html',data)
 
@@ -65,6 +67,7 @@ def search(request):
             tubers = tubers.filter(category__iexact=category)
     data={
             'tubers':tubers,
+            'title':'Search',
             'city_search':city_search,
             'camera_search':camera_search,
             'category_search':category_search,
