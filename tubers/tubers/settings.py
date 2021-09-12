@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'hiretubers.apps.HiretubersConfig',
     'sideinfo.apps.SideinfoConfig',
     'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
