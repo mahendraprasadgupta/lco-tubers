@@ -53,15 +53,15 @@
             <div class="card-body">
               <div class="mb-4">
                 <h6 class="card-title font-weight-bolder">Phone</h6>
-                <span class="card-text">+91 9898989899</span>
+                <span class="card-text">+91 {{ headersideinfo.mobile}}</span>
               </div>
               <div class="mb-4">
                 <h6 class="card-title font-weight-bolder">Email</h6>
-                <span class="card-text">info@ytubers.com</span>
+                <span class="card-text">{{ headersideinfo.email }}</span>
               </div>
               <div class="mb-4">
                 <h6 class="card-title font-weight-bolder">Address</h6>
-                <span class="card-text">12 some street, <br> Some city and State, <br>India </span>
+                <span class="card-text">{{ headersideinfo.address | safe }}</span>
               </div>
             </div>
           </div>

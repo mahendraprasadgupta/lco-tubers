@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.fields import NullBooleanField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class HeaderSideinfo(models.Model):
@@ -7,6 +9,8 @@ class HeaderSideinfo(models.Model):
     mobile = models.CharField(max_length=100,blank=False)
     signin = models.CharField(max_length=10,blank=False)
     signup = models.CharField(max_length=10,blank=False)
+    #address = models.TextField(max_length=255,default='mahiu')
+    address =RichTextField()
     active = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
 
