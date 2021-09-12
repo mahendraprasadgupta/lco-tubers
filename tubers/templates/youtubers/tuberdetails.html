@@ -60,6 +60,10 @@
           {% csrf_token %}
           <h3 class="pt-2 pb-2">Fill the Form and reach out</h3>
 
+          <div class="form-group">
+            {% include 'messages.html' %}
+          </div>
+
           <div class="form-row">
             <div class="form-group col-md-4">
               <input name="first_name" class="form-control" placeholder="First Name">

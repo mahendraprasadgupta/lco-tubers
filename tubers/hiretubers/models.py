@@ -17,7 +17,8 @@ class Hiretuber(models.Model):
     tuber_id = models.IntegerField()
     tuber_name = models.CharField(max_length=100)
     
-    created_date = models.DateTimeField(blank=True,default=datetime.now)
+    
+    created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email
